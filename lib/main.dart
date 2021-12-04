@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'our_button.dart';
 
 void main() => runApp(const MyApp());
 
@@ -122,10 +123,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: OurButton(
+        text: 'Make the counter ${_counter + 1}',
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        textColor: Colors.white,
+        backgroundColor: Theme.of(context).primaryColor,
+        splashColor: Theme.of(context).primaryColorLight,
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
