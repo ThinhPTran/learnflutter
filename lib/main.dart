@@ -107,19 +107,22 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            const Padding(
+                padding: EdgeInsets.all(80.0),
+                child: Text(
+                  'You have pushed the button this many times:',
+                )),
             Text(
               _displayedString,
               style: Theme.of(context).textTheme.headline4,
             ),
-            TextButton(
-                onPressed: _resetCounter,
-                child: Text(
-                  "Reset counter",
-                  style: Theme.of(context).textTheme.button,
-                )),
+            OurButton(
+              onPressed: _resetCounter,
+              text: "Reset counter",
+              textColor: Colors.white,
+              backgroundColor: Theme.of(context).primaryColor,
+              splashColor: Theme.of(context).primaryColorLight,
+            ),
           ],
         ),
       ),
