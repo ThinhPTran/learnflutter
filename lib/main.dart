@@ -60,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_counter == 0) {
@@ -107,6 +113,12 @@ class _MyHomePageState extends State<MyHomePage> {
               _displayedString,
               style: Theme.of(context).textTheme.headline4,
             ),
+            TextButton(
+                onPressed: _resetCounter,
+                child: Text(
+                  "Reset counter",
+                  style: Theme.of(context).textTheme.button,
+                )),
           ],
         ),
       ),
