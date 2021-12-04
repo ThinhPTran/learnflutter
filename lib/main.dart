@@ -114,9 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 )),
             Container(
               alignment: Alignment.center,
-              color: Colors.blueAccent,
-              padding: EdgeInsets.all(20.0),
-              width: 200,
+              padding: const EdgeInsets.all(20.0),
+              width: 200.0,
+              height: 200.0,
+              decoration: const BoxDecoration(
+                  backgroundBlendMode: BlendMode.colorBurn,
+                  shape: BoxShape.circle,
+                  color: Colors.blue),
               child: Text(
                 _displayedString,
                 style: Theme.of(context).textTheme.headline4,
