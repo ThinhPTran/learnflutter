@@ -107,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image.asset("myassets/us_workers_quit.png", width: 380.0),
             const Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Text(
